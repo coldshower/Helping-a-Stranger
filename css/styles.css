@@ -1,0 +1,38 @@
+body {
+	background: black;
+}
+
+
+main, section, footer {
+	color: #C1C1C1;
+	font-family: 'Courier';
+	font-size: 1em;
+}
+
+section {
+	display: none;
+}
+
+section#player_input input[type="text"] {
+	background: black;
+	font-family: 'Courier';
+	font-size: 1em;
+	border: none;
+	width: 60%;
+}
+
+section#player_input input[type="text"]:focus {
+	outline: none;
+	color: #C1C1C1;
+}
+
+main p span#placeholder {
+	color: black;
+}
+
+footer {
+	display: none;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
