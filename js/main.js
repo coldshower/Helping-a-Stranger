@@ -126,6 +126,7 @@
 																						}, 3000);
 																						
 																					}	else if (gameInstance.attemptsleft === 0){
+																						$('section').hide();
 																						setTimeout(function(){
 																							it_speaks.html("...The system has locked us out. It's done.");
 																							setTimeout(function(){
@@ -133,6 +134,7 @@
 																								setTimeout(function(){
 																									it_speaks.html("Goodbye.");
 																									gameInstance.newgame();
+																									$('section').show();
 																								}, 3500);
 																							}, 3500);
 																						}, 3000);
