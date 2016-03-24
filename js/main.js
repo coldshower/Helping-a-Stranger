@@ -134,6 +134,7 @@
 																								setTimeout(function(){
 																									it_speaks.html("Goodbye.");
 																									gameInstance.newgame();
+
 																									$('section').show();
 																								}, 4500);
 																							}, 4500);
