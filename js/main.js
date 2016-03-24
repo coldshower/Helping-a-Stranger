@@ -126,6 +126,7 @@
 																						}, 3000);
 																						
 																					}	else if (gameInstance.attemptsleft === 0){
+																						$('section').hide();
 																						setTimeout(function(){
 																							it_speaks.html("...The system has locked us out. It's done.");
 																							setTimeout(function(){
@@ -133,9 +134,16 @@
 																								setTimeout(function(){
 																									it_speaks.html("Goodbye.");
 																									gameInstance.newgame();
+<<<<<<< HEAD
 																								}, 4500);
 																							}, 4500);
 																						}, 4000);
+=======
+																									$('section').show();
+																								}, 3500);
+																							}, 3500);
+																						}, 3000);
+>>>>>>> origin/gh-pages
 																					}
 
 																				} else { // if you troll with gibberish
