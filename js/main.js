@@ -134,16 +134,16 @@
 																								setTimeout(function(){
 																									it_speaks.html("Goodbye.");
 																									gameInstance.newgame();
-<<<<<<< HEAD
+
 																								}, 4500);
 																							}, 4500);
 																						}, 4000);
-=======
+
 																									$('section').show();
 																								}, 3500);
 																							}, 3500);
 																						}, 3000);
->>>>>>> origin/gh-pages
+
 																					}
 
 																				} else { // if you troll with gibberish
