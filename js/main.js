@@ -67,11 +67,19 @@
 																				var win_num = gameInstance.winning_number;
 																				var abs_diff = Math.abs(int_guess - win_num);
 
-																				if (guess.toLowerCase() === "reset" || guess.toLowerCase() === "'reset'"){
+																				if (guess.toLowerCase() === "reset" || guess.toLowerCase() === "'reset'" || guess.toLowerCase() === '"reset"'){ // reset the game
 																					gameInstance.newgame();
 																					console.log(gameInstance);
-																				} else if (guess.toLowerCase() === "guesses" || guess.toLowerCase() === "'guesses'"){
+																				} else if (guess.toLowerCase() === "guesses" || guess.toLowerCase() === "'guesses'" || guess.toLowerCase() === '"guesses"'){ // check your prev guesses
 																					it_speaks.html("You've guessed the following so far: " + gameInstance.guesses);
+
+																				} else if (guess === "left" || guess === "'left'" || guess === '"left"'){ // check how many tries you have left
+																					if (gameInstance.attemptsleft < 6 && gameInstance.attemptsleft > 1){
+																						it_speaks.html("You have " + gameInstance.attemptsleft + " attempts left.");
+																						
+																					}	else if (gameInstance.attemptsleft === 1){
+																						it_speaks.html("You have 1 attempt left.");
+																					}
 
 																				} else if (gameInstance.guesses.includes(int_guess)) { // scolds you for repeating numbers
 																					it_speaks.html("I would laugh, but my life is on the line.");
@@ -133,14 +141,15 @@
 																								it_speaks.html("Don't grieve. The cycle of life and death continues.");
 																								setTimeout(function(){
 																									it_speaks.html("Goodbye.");
-																									gameInstance.newgame();
-
-																									$('section').show();
+																									setTimeout(function(){
+																										gameInstance.newgame();
+																										$('section').show();
+																									}, 3500);																								
 																								}, 4500);
 																							}, 4500);
 																						}, 4000);																								
 																					}
-																				} else { // if you troll with gibberish
+																				} else { // if you troll with gibberish or not in range of 1-100
 																					it_speaks.html("I would laugh, but my life is on the line.");
 																				}
 
