@@ -74,7 +74,7 @@
 																					it_speaks.html("You've guessed the following so far: " + gameInstance.guesses);
 
 																				} else if (guess === "left" || guess === "'left'" || guess === '"left"'){ // check how many tries you have left
-																					if (gameInstance.attemptsleft < 6 && gameInstance.attemptsleft > 1){
+																					if (gameInstance.attemptsleft > 1){
 																						it_speaks.html("You have " + gameInstance.attemptsleft + " attempts left.");
 																						
 																					}	else if (gameInstance.attemptsleft === 1){
