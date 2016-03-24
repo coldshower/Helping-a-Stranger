@@ -122,18 +122,8 @@
 																					}
 																					gameInstance.guesses.push(int_guess);
 																					gameInstance.attemptsleft -= 1;
-
-																					if (gameInstance.attemptsleft < 6 && gameInstance.attemptsleft > 1){
-																						setTimeout(function(){
-																							it_speaks.html("You have " + gameInstance.attemptsleft + " attempts left.");
-																						}, 3000);
-
-																					}	else if (gameInstance.attemptsleft === 1){
-																						setTimeout(function(){
-																							it_speaks.html("You have 1 attempt left.");
-																						}, 3000);
 																						
-																					}	else if (gameInstance.attemptsleft === 0){
+																					if (gameInstance.attemptsleft === 0){ // run out of attempts
 																						$('section').hide();
 																						setTimeout(function(){
 																							it_speaks.html("...The system has locked us out. It's done.");
@@ -155,7 +145,7 @@
 
 																				entry.val(""); // empties the interface after pressing return
 																			}
-																		});
+																		}); // entry.on('keypress')
 
 																	}, 6000);
 																}, 5000); // The number will be...
