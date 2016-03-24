@@ -134,18 +134,11 @@
 																								setTimeout(function(){
 																									it_speaks.html("Goodbye.");
 																									gameInstance.newgame();
-<<<<<<< HEAD
+																									$('section').show();
 																								}, 4500);
 																							}, 4500);
-																						}, 4000);
-=======
-																									$('section').show();
-																								}, 3500);
-																							}, 3500);
-																						}, 3000);
->>>>>>> origin/gh-pages
+																						}, 4000);																								
 																					}
-
 																				} else { // if you troll with gibberish
 																					it_speaks.html("I would laugh, but my life is on the line.");
 																				}
