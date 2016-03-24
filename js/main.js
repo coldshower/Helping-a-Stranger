@@ -133,9 +133,9 @@
 																								setTimeout(function(){
 																									it_speaks.html("Goodbye.");
 																									gameInstance.newgame();
-																								}, 3500);
-																							}, 3500);
-																						}, 3000);
+																								}, 4500);
+																							}, 4500);
+																						}, 4000);
 																					}
 
 																				} else { // if you troll with gibberish
