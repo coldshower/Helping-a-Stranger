@@ -1,7 +1,7 @@
 (function(){
 
 	$('document').ready(function(){
-		var morpheus = $('main p#morpheus');
+		var morpheus = $('main').find('p#morpheus');
 		var it_speaks = morpheus.show();
 
 		setTimeout(function(){
@@ -39,7 +39,7 @@
 
 																		$('section').show(); // show interface
 																		$('footer').show(); // show footer
-																		var entry = $('section#player_input input[name="interface"]'); // saving the input to a variable
+																		var entry = $('section#player_input').find('input[name="interface"]'); // saving the input to a variable
 
 																		// start of game logic
 
